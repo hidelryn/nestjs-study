@@ -5,7 +5,7 @@ import { UserDto, CreateUserDto, DeleteUserDto } from './user.dto';
 export class UserService {
   // nest g service 서비스명
   private users: UserDto[] = [];
-  private id: number = 0;
+  private id = 0;
 
   createUser(createUserDto: CreateUserDto): UserDto {
     const ts = Date.now();
@@ -29,11 +29,6 @@ export class UserService {
     const idx = this.findUser(id);
     if (idx === -1) return null;
     return this.users[idx];
-  }
-
-  deleteUser(deleteUserDto: DeleteUserDto) {
-    const idx = this.findUser(deleteUserDto.id);
-    this.users.splice(idx, 1);
   }
 
   private findUser(id: number): number {

@@ -1,20 +1,22 @@
-
-import * as Types from '../libs/types';
+type ID = number;
+type Name = string;
+type Age = number;
+type CreateAt = number;
+type UpdateAt = number;
 
 export class UserDto {
-    id: Types.ID;
-    name: Types.Name;
-    age: Types.Age;
-    createAt: Types.CreateAt;
-    updateAt: Types.UpdateAt;
+  id: ID;
+  name: Name;
+  age: Age;
+  createAt: CreateAt;
+  updateAt: UpdateAt;
 }
 
 export class CreateUserDto {
-    name: Types.Name;
-    age: Types.Age;
+  name: Name;
+  age: Age;
 }
 
 export class DeleteUserDto {
-    id: Types.ID
+  id: ID;
 }
-
